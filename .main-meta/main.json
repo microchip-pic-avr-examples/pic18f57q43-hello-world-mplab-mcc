@@ -7,7 +7,7 @@
         "version": " ",
         "displayName": "PIC18F57Q43 hello world mplab mcc",
         "projectName": "pic18f57q43-hello-world-mplab-mcc",
-        "shortDescription": "This example code hello world will setup ports and blink Led",
+        "shortDescription": "This example code hello world will setup ports and light Led",
         "ide": {
             "name": "MPLAB X",
             "semverRange": ">=5.45.0"
@@ -19,12 +19,12 @@
             }
         ],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "PIC18F-Q_DFP",
+            "semverRange": "^1.11.185"
         },
         "configurator": {
-            "name": "",
-            "semverRange": ""
+            "name": "MCC",
+            "semverRange": ">=4.1.0"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -37,9 +37,9 @@
             }
         },
         "author": "Jamus Griego",
-        "subcategories": [],
+        "subcategories": ["MCC"],
         "peripherals": [],
-        "keywords": [],
+        "keywords": ["MCC","Melody"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",

@@ -1,41 +1,73 @@
 <!-- Please do not change this logo with link -->
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# Update the title for pic18f57q43-hello-world-mplab-mcc here
+# Hello World
 
-<!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
+This example shows how to configure the LED on the PIC18F57Q43 Curiosity Nano to light up using drivers in MPLAB Code Configurator (MCC). The example uses the Pin Manager to configure the correct pin to be an output and to provide the correct output voltage for lighting the LED.
 
 ## Related Documentation
 
-<!-- Any information about an application note or tech brief can be linked here. Use unbreakable links!
-     In addition a link to the device family landing page and relevant peripheral pages as well:
-     - [AN3381 - Brushless DC Fan Speed Control Using Temperature Input and Tachometer Feedback](https://microchip.com/00003381/)
-     - [PIC18F-Q10 Family Product Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family) -->
+- [MPLAB Code Configurator](https://www.microchip.com/en-us/development-tools-tools-and-software/embedded-software-center/mplab-code-configurator)
+- [PIC18-Q43 Family Product Page](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/pic18-q43)
 
 ## Software Used
 
-<!-- All software used in this example must be listed here. Use unbreakable links!
-     - MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-     - MPLAB® XC8 2.10 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-     - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) -->
+- [MPLAB® X IDE](http://www.microchip.com/mplab/mplab-x-ide) **5.45** or newer 
+- [MPLAB® XC8](http://www.microchip.com/mplab/compilers) **2.31** or a newer compiler 
+- [MPLAB® Code Configurator (MCC)](https://www.microchip.com/mplab/mplab-code-configurator) **4.1.0** or newer 
+- [MPLAB® Melody Library](https://www.microchip.com/mplab/mplab-code-configurator) **1.37.24** or newer 
+- PIC18F-Q_DFP **1.11.185** or newer Device Pack
 
 ## Hardware Used
 
-<!-- All hardware used in this example must be listed here. Use unbreakable links!
-     - PIC18F47Q10 Curiosity Nano [(DM182029)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
-     - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
-     - POT Click board™ [(MIKROE-3402)](https://www.mikroe.com/pot-click) -->
+- [Microchip PIC18F57Q43 Curiosity Nano Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DM164150)
+
 
 ## Setup
 
-<!-- Explain how to connect hardware and set up software. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+MCC with the Melody library was used to implement this example as shown in the following section.
+
+### Pin Configuration
+The Pin controlling the onboard LED on the Curiosity Nano board was configured using the Pins Grid View. The Pins Grid View is accessed by clicking on the Pins line in Project Resources.
+
+![MCC - Open Pin Manager](images/click_on_pins_in_project_configurations.png)
+
+*Project Resources*
+
+Then the pin connected to the LED, RF3, was selected as an output by clicking the corresponding padlock symbol.
+
+![MCC - Set Pin to Output](images/pin_grid_view.jpg)
+
+*Pins Grid View*s
+
+RF3 has both digital and analog capability the pin will have to be configured as digital only the analog checkbox is selected by default. The user must click the checkbox to deselect the analog function from the pin.
+
+![MCC - Set Pin to Output](images/uncheck_analog_for_RF3.png)
+
+*Pins Tab*
+
+The pin was also configured with a custom name to make the generated API more readable. 
+
+![MCC - Custom Pin Name](images/custom_pin_name.png)
+*Custom Pin Name*
+
+The API is not needed in this application since the pin does not change, but if the user would like to configure it, the API makes it easy to reconfigure the pin in the code. For example, the code below could be used to toggle the output voltage of the pin from high to low or vice versa:
+
+```c
+LED_PIN_Toggle();
+```
+
+Since the LED on the Curiosity Nano board is active low, that is, lighting up when the pin outputs a low voltage, the pin needs no further configuration. As seen below, the checkbox named "Start High" is not checked, so the pin starts with a low output.
+
+![MCC - Custom Pin Name](images/start_high.png)
+
+*Start High Not Enabled*
+
 
 ## Operation
 
-<!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+After having flashed the application to the PIC18F57Q43 Curiosity Nano, the onboard LED is lit.
 
 ## Summary
 
-<!-- Summarize what the example has shown -->
+The example has shown how MCC can be used to easily configure the pins of the PIC18F57Q43 device. 
