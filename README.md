@@ -36,20 +36,15 @@ The Pin controlling the onboard LED on the Curiosity Nano board was configured u
 
 Then the pin connected to the LED, RF3, was selected as an output by clicking the corresponding padlock symbol.
 
-![MCC - Set Pin to Output](images/pin_grid_view.jpg)
+![MCC - Set Pin to Output](images/pin_grid_view.png)
 
 *Pins Grid View*s
 
-RF3 has both digital and analog capability the pin will have to be configured as digital only the analog checkbox is selected by default. The user must click the checkbox to deselect the analog function from the pin.
+RF3 has both digital and analog capability the pin will have to be configured as digital only the analog checkbox is selected by default. The user must click the checkbox to deselect the analog function from the pin. The pin was also configured with a custom name to make the generated API more readable. 
 
 ![MCC - Set Pin to Output](images/uncheck_analog_for_RF3.png)
 
 *Pins Tab*
-
-The pin was also configured with a custom name to make the generated API more readable. 
-
-![MCC - Custom Pin Name](images/custom_pin_name.png)
-*Custom Pin Name*
 
 The API is not needed in this application since the pin does not change, but if the user would like to configure it, the API makes it easy to reconfigure the pin in the code. For example, the code below could be used to toggle the output voltage of the pin from high to low or vice versa:
 

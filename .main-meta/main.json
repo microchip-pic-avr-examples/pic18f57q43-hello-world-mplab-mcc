@@ -38,7 +38,7 @@
         },
         "author": "Jamus Griego",
         "subcategories": ["MCC"],
-        "peripherals": [],
+        "peripherals": ["PORT"],
         "keywords": ["MCC","Melody"],
         "additionalData": {
             "longDescription": {
