@@ -4,10 +4,10 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f57q43-hello-world-mplab-mcc",
-        "version": " ",
-        "displayName": "PIC18F57Q43 hello world mplab mcc",
+        "version": "1.0.0",
+        "displayName": "Hello World LED",
         "projectName": "pic18f57q43-hello-world-mplab-mcc",
-        "shortDescription": "This example code hello world will setup ports and light Led",
+        "shortDescription": "This code sets up a GPIO pin and turns on a LED",
         "ide": {
             "name": "MPLAB X",
             "semverRange": ">=5.45.0"
@@ -37,9 +37,9 @@
             }
         },
         "author": "Jamus Griego",
-        "subcategories": ["MCC"],
+        "subcategories": ["Peripherals", "PORT"],
         "peripherals": ["PORT"],
-        "keywords": ["MCC","Melody"],
+        "keywords": ["PORT","LED", "Curiosity Nano", "Melody"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",

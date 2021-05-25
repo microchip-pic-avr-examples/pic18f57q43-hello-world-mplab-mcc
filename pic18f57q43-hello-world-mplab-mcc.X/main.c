@@ -40,8 +40,7 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
 int main(void)
 {
     SYSTEM_Initialize();
-        LED_PIN_Toggle(); 
-    while(1)
+        while(1)
     {   
     }    
 }

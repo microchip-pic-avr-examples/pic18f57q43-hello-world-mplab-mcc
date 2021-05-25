@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>pic18f57q43_hello_world_mplab_mcc</name>
+            <name>pic18f57q43-hello-world-mplab-mcc</name>
             <creation-uuid>71567e8f-2321-4818-8375-8c10dd95b73e</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
@@ -15,7 +15,11 @@
             <sourceRootList/>
             <confList>
                 <confElem>
-                    <name>default</name>
+                    <name>free</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>pro</name>
                     <type>2</type>
                 </confElem>
             </confList>
